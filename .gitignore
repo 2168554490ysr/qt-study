@@ -1,0 +1,37 @@
+# Qt构建产物
+*.o
+*.obj
+moc_*.cpp
+moc_*.h
+ui_*.h
+qrc_*.cpp
+Makefile
+*.pro.user
+*.pro.user.*
+
+# 可执行文件（无后缀）
+/day01_hello_qt
+/day02_signals_slots
+/day03_widgets
+/day04_layout
+/day05_mainwindow
+/day06_custom_widget
+/day07_qss
+/day08_model_view
+/day09_i18n
+/day10_resources
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 临时文件
+*.tmp
+*.log
+
+# 构建目录
+build/
+build-*/
