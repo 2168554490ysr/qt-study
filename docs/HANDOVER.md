@@ -60,14 +60,20 @@ LinuxDeviceManager/
 - Qt5已安装（版本5.15.3）
 - qmake可用
 - Day01示例代码已创建并验证可编译
-- Git已配置（待初始化仓库）
+- ✅ Git已初始化并配置完成
 
 ### 2.4 Git版本管理
-**【重要】每次学习都必须使用Git进行版本管理**
+**【重要】每一次代码更改都必须使用Git进行版本管理**
 
 - 仓库位置：`LinuxDeviceManager/`（根目录）
-- 提交频率：每个学习日至少提交1次
+- 远程仓库：`https://github.com/2168554490ysr/qt-study.git`
+- 代理配置：`http://127.0.0.1:7897`
+- **提交频率：每一次代码更改都要提交**
+  - 每完成一个功能点提交一次
+  - 每修复一个bug提交一次
+  - 每完成一个学习日任务提交一次
 - 提交规范：见第5章Git使用规范
+- **核心原则：频繁提交，小步快跑**
 
 ---
 
@@ -128,10 +134,26 @@ SOURCES += main.cpp
 # 3. 创建 README.md（使用模板）
 # 4. 创建 main.cpp（包含当天知识点的示例代码）
 # 5. 验证编译：qmake && make
-# 6. 更新 PROGRESS.md 标记新学习日
-# 7. 【重要】Git提交
+# 6. 【重要】第一次Git提交 - 创建项目
 git add learning/stage1_ui_basics/day02_signals_slots/
 git commit -m "day02: 创建信号与槽学习项目"
+git push
+
+# 7. 后续每完成一个功能点都要提交
+# 例如：完成信号连接功能
+git add .
+git commit -m "day02: 实现按钮点击信号连接"
+git push
+
+# 例如：完成Lambda表达式
+git add .
+git commit -m "day02: 添加Lambda表达式示例"
+git push
+
+# 8. 更新 PROGRESS.md 标记新学习日
+git add learning/PROGRESS.md
+git commit -m "docs: 更新Day02学习进度"
+git push
 ```
 
 ### 4.3 README.md 模板
@@ -273,25 +295,47 @@ git add .
 git commit -m "init: 初始化项目，创建Day01学习代码"
 ```
 
-### 5.2 每次学习的Git流程
+### 5.2 Git提交流程（每次代码更改都执行）
 
-**【必须】每个学习日结束时执行：**
+**【必须】每一次代码更改都要执行以下步骤：**
 
 ```bash
-# 1. 查看当前状态
+# 1. 查看当前修改
 git status
 
-# 2. 添加当天学习代码
-git add learning/stage1_ui_basics/day01_hello_qt/
+# 2. 查看具体修改内容（确认无误）
+git diff
 
-# 3. 提交（使用规范格式）
+# 3. 添加修改的文件
+git add <具体文件>       # 推荐：添加特定文件
+git add .                # 或者：添加所有修改
+
+# 4. 提交（使用规范格式）
 git commit -m "day01: 完成Hello Qt学习，理解QApplication和项目结构"
 
-# 4. 查看提交历史
+# 5. 推送到远程仓库
+git push
+
+# 6. 查看提交历史确认成功
 git log --oneline -5
 ```
 
-### 5.3 提交信息规范
+### 5.3 何时需要提交
+
+| 场景 | 提交示例 | 说明 |
+|------|----------|------|
+| 完成一个功能点 | `day02: 实现按钮点击信号连接` | 每完成一个小功能 |
+| 修复一个bug | `fix: 修复Day03按钮不响应问题` | 修复后立即提交 |
+| 重构代码 | `refactor: 优化Day05代码结构` | 重构后提交 |
+| 更新文档 | `docs: 更新Day02学习笔记` | 文档更新也要提交 |
+| 完成学习日 | `day02: 完成信号与槽学习` | 学习日结束时 |
+
+**核心原则：频繁提交，小步快跑**
+- 每15-30分钟的工作就应该有一次提交
+- 不要积累大量修改后再提交
+- 提交应该是原子性的（一个提交只做一件事）
+
+### 5.4 提交信息规范
 
 **格式**: `<type>: <subject>`
 
@@ -308,7 +352,7 @@ git log --oneline -5
 - 使用中文
 - 说明做了什么，而非怎么做的
 
-### 5.4 分支策略
+### 5.5 分支策略
 
 ```
 main (主分支)
@@ -318,16 +362,21 @@ main (主分支)
 所有代码直接提交到main分支即可
 ```
 
-### 5.5 Git使用检查清单
+### 5.6 Git使用检查清单
 
-每次学习结束时检查：
+**每一次代码更改后都要检查：**
 - [ ] 代码可以编译通过
-- [ ] 已执行 `git add` 添加文件
-- [ ] 已执行 `git commit` 提交
-- [ ] 提交信息符合规范
-- [ ] 已更新 `PROGRESS.md` 进度
+- [ ] 已执行 `git add` 添加修改的文件
+- [ ] 已执行 `git commit` 提交（信息符合规范）
+- [ ] 已执行 `git push` 推送到远程
+- [ ] 已更新 `PROGRESS.md` 进度（如需要）
 
-### 5.6 常用Git命令速查
+**提交频率检查：**
+- [ ] 是否每完成一个功能点就提交？
+- [ ] 是否每15-30分钟就有提交？
+- [ ] 提交是否是原子性的（一个提交只做一件事）？
+
+### 5.7 常用Git命令速查
 
 ```bash
 # 查看状态
@@ -383,7 +432,12 @@ TOPIC=signals_slots
 
 mkdir -p learning/${STAGE}/${DAY}_${TOPIC}
 # 然后创建.pro, README.md, main.cpp
-# 最后别忘了：git add + git commit
+# 验证编译通过后
+
+# 【必须】Git提交
+git add learning/${STAGE}/${DAY}_${TOPIC}/
+git commit -m "${DAY}: 创建${TOPIC}学习项目"
+git push
 ```
 
 ---
@@ -414,6 +468,9 @@ mkdir -p learning/${STAGE}/${DAY}_${TOPIC}
 - [x] 创建Day01示例代码并验证编译
 - [x] 创建学习进度跟踪文件
 - [x] 完善交接文档，加入AI操作指令
+- [x] 初始化Git仓库并配置代理
+- [x] 完成第一次Git提交并推送到远程仓库
+- [x] 更新交接文档，强调每一次代码更改都要Git提交
 
 ### 7.2 学习者状态
 - 尚未开始实际编码学习
@@ -431,7 +488,7 @@ mkdir -p learning/${STAGE}/${DAY}_${TOPIC}
 
 | 日期 | 更新人 | 更新内容 |
 |------|--------|----------|
-| 2026-04-18 | AI Assistant | 初始创建，完成项目架构和Day01准备 |
+| 2026-04-18 | AI Assistant | 初始创建，完成项目架构和Day01准备，初始化Git仓库 |
 
 ---
 
@@ -439,6 +496,11 @@ mkdir -p learning/${STAGE}/${DAY}_${TOPIC}
 1. 更新本文件的"本次对话记录"章节
 2. 更新`learning/PROGRESS.md`中的进度表格
 3. 确保所有新创建的代码都已验证可编译
-4. **执行Git提交（如完成学习日）**
+4. **【必须】执行Git提交（每一次代码更改）**
    - `git add .`
-   - `git commit -m "dayXX: 完成XXX学习"`
+   - `git commit -m "dayXX: 完成XXX功能"`
+   - `git push`
+5. **更新交接文档并提交**
+   - `git add docs/HANDOVER.md`
+   - `git commit -m "docs: 更新交接文档"`
+   - `git push`
