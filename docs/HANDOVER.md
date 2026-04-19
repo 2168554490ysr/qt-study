@@ -477,7 +477,7 @@ git push
 - [x] 完成Day03学习：创建常用控件项目，实现用户注册表单
 - [x] 修复Lambda连接编译错误
 - [x] 更新Day03 README的Q&A部分（10个问题）
-- [x] 安装Qt5开发环境（版本5.12.8）
+- [x] 安装Qt5开发环境（版本5.12.8）在另外一台机上安装了
 - [x] 验证Git远程仓库配置
 - [x] 创建Day04项目：布局管理（Layout）
 - [x] 创建day04_layout.pro项目文件
@@ -496,16 +496,24 @@ git push
 - [x] **创建README.md学习文档（含Q&A）**
 - [x] **验证Day05代码编译通过**
 - [x] **更新PROGRESS.md进度文档（Day05标记为进行中）**
-- [x] **更新HANDOVER.md交接文档"
+- [x] **更新HANDOVER.md交接文档**
+- [x] **完成Day05学习：理解QMainWindow、QMenuBar、QToolBar、QStatusBar**
+- [x] **掌握QAction动作复用、快捷键设置**
+- [x] **掌握QMessageBox::about关于对话框**
+- [x] **学习QString格式化字符串（arg()方法）**
+- [x] **更新Day05 README的Q&A部分（新增Q8-Q10）**
+- [x] **标记Day05为已完成状态**
+- [x] **更新PROGRESS.md进度文档（Day05标记为已完成）**
 
 ### 7.2 学习者状态
 - ✅ Day01已完成：理解QApplication、窗口创建、按钮添加
 - ✅ Day02已完成：理解信号与槽、Lambda表达式、布局管理
 - ✅ Day03已完成：掌握常用控件、QFormLayout、字体设置、进度条更新
 - ✅ Day04已完成：掌握QHBoxLayout、QVBoxLayout、QGridLayout、布局嵌套、拉伸因子
-- 📝 Day05已创建：主窗口项目已创建并验证编译，等待学习
+- ✅ Day05已完成：掌握QMainWindow、菜单栏、工具栏、状态栏、中心部件
 - Qt5开发环境已安装（版本5.12.8）
 - Git远程仓库已配置并可用
+- 准备开始Day06：自定义控件
 
 ### 7.3 下一步任务
 1. ~~创建Day04项目~~ ✅ 已完成
@@ -513,13 +521,12 @@ git push
 3. ~~理解布局嵌套和拉伸因子~~ ✅ 已完成
 4. ~~更新README Q&A~~ ✅ 已完成
 5. ~~创建Day05项目~~ ✅ 已完成
-6. **学习Day05代码：主窗口(MainWindow)**
-   - 理解QMainWindow结构
-   - 学习菜单栏(QMenuBar)和QAction
-   - 学习工具栏(QToolBar)
-   - 学习状态栏(QStatusBar)
-   - 理解中心部件(Central Widget)
-   - 掌握动作的快捷键设置和复用
+6. ~~学习Day05代码~~ ✅ 已完成
+7. **创建Day06项目：自定义控件**
+   - 学习继承QWidget创建自定义控件
+   - 掌握自定义信号和槽
+   - 学习重写paintEvent绘制自定义外观
+   - 理解控件的组合和封装
 
 ---
 
@@ -532,6 +539,7 @@ git push
 | 2026-04-18 | AI Assistant | 完成Day03学习，修复编译错误，更新文档 |
 | 2026-04-19 | AI Assistant | 安装Qt5开发环境，创建Day04布局管理项目，更新进度文档 |
 | 2026-04-19 | AI Assistant | 完成Day04学习，创建Day05主窗口项目，更新所有进度文档 |
+| 2026-04-19 | AI Assistant | 完成Day05学习，掌握QMainWindow、菜单栏、工具栏、状态栏，更新README的Q&A部分 |
 
 ---
 

@@ -1,20 +1,20 @@
 # Day 05: 主窗口(MainWindow)
 
 ## 学习目标
-- [ ] 掌握 QMainWindow 主窗口结构
-- [ ] 掌握菜单栏(QMenuBar)的创建和使用
-- [ ] 掌握工具栏(QToolBar)的创建和使用
-- [ ] 掌握状态栏(QStatusBar)的创建和使用
-- [ ] 理解中心部件(Central Widget)的概念
-- [ ] 学习动作(QAction)的复用
+- [x] 掌握 QMainWindow 主窗口结构
+- [x] 掌握菜单栏(QMenuBar)的创建和使用
+- [x] 掌握工具栏(QToolBar)的创建和使用
+- [x] 掌握状态栏(QStatusBar)的创建和使用
+- [x] 理解中心部件(Central Widget)的概念
+- [x] 学习动作(QAction)的复用
 
 ## 实践任务
-1. [ ] 创建 QMainWindow 主窗口
-2. [ ] 创建菜单栏，包含文件、编辑、帮助菜单
-3. [ ] 创建工具栏，添加常用按钮
-4. [ ] 创建状态栏，显示状态信息
-5. [ ] 创建中心部件(QTextEdit作为编辑器)
-6. [ ] 实现动作的快捷键和信号槽连接
+1. [x] 创建 QMainWindow 主窗口
+2. [x] 创建菜单栏，包含文件、编辑、帮助菜单
+3. [x] 创建工具栏，添加常用按钮
+4. [x] 创建状态栏，显示状态信息
+5. [x] 创建中心部件(QTextEdit作为编辑器)
+6. [x] 实现动作的快捷键和信号槽连接
 
 ---
 
@@ -183,6 +183,52 @@ action->setEnabled(true);   // 启用
 - QTableWidget（表格）
 - QGraphicsView（图形视图）
 - 自定义的 QWidget
+
+### Q8: QMessageBox::about 是做什么的？
+**A:** `QMessageBox::about()` 用于显示**关于对话框**，通常用于展示应用程序的版本信息、版权信息、开发团队等。
+
+```cpp
+QMessageBox::about(parent, "标题", "内容");
+```
+
+特点：
+- 预置样式，系统标准外观
+- 只有一个"确定"按钮
+- 支持 HTML 格式化内容
+- 自动显示应用程序图标
+
+### Q9: QString 如何格式化字符串？
+**A:** 使用 `arg()` 方法（推荐）：
+
+```cpp
+// 单个参数
+QString str = QString("字符数: %1").arg(23);
+// 结果: "字符数: 23"
+
+// 多个参数
+QString str = QString("姓名: %1, 年龄: %2").arg("张三").arg(25);
+// 结果: "姓名: 张三, 年龄: 25"
+
+// 格式化数字
+QString str = QString("价格: %1").arg(3.14159, 0, 'f', 2);
+// 结果: "价格: 3.14"
+```
+
+其他方式：
+- `QString::number(123)` - 数字转字符串
+- `str.sprintf("格式%d", 123)` - C风格格式化（不推荐）
+
+### Q10: 如何实时更新状态栏信息？
+**A:** 使用信号槽连接文本变化信号：
+
+```cpp
+QObject::connect(textEdit, &QTextEdit::textChanged, [&]() {
+    int len = textEdit->toPlainText().length();
+    permanentLabel->setText(QString("字符数: %1").arg(len));
+});
+```
+
+这样每次用户输入时，状态栏会自动更新字符数。
 
 ---
 
