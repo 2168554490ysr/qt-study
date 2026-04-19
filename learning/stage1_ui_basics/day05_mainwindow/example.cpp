@@ -191,6 +191,6 @@ int main(int argc, char *argv[])
     // ========================================
     mainWindow.show();
     qDebug() << "Day05 主窗口示例已启动";
-
+    qDebug() << "OK";
     return app.exec();
 }
