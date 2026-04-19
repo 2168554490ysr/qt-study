@@ -171,6 +171,6 @@ int main(int argc, char *argv[])
 
     window.show();
     qDebug() << "Day04 布局管理示例已启动";
-
+    qDebug() << "OK";
     return app.exec();
 }
