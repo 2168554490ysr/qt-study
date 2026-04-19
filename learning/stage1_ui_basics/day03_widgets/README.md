@@ -305,10 +305,111 @@ bar->setFormat("进度: %p%");  // %p表示百分比
 
 ---
 
+### Q6: Lambda表达式连接时出现编译错误？
+
+**A**: 错误信息：
+```
+error: 'QtPrivate::QFunctorSlotObject<...>', declared using local type, is used but never defined
+```
+
+**原因**：对Lambda取了地址 `&updateProgress`
+
+**错误写法**：
+```cpp
+auto updateProgress = [&]() { ... };
+QObject::connect(..., &updateProgress);  // ❌ 加了&
+```
+
+**正确写法**：
+```cpp
+auto updateProgress = [&]() { ... };
+QObject::connect(..., updateProgress);   // ✅ 不加&
+```
+
+**规则**：
+| 槽类型 | 连接方式 |
+|--------|----------|
+| 成员函数 | `&Class::slot` |
+| 静态函数 | `&function` |
+| **Lambda** | **直接写名字，不加`&`** |
+
+---
+
+### Q7: 如何设置控件字体样式？
+
+**A**: 使用`QFont`类：
+```cpp
+QLabel *title = new QLabel("标题");
+QFont font = title->font();      // 获取当前字体
+font.setPointSize(16);           // 设置字号
+font.setBold(true);              // 设置粗体
+font.setItalic(true);            // 设置斜体
+title->setFont(font);            // 应用字体
+```
+
+---
+
+### Q8: QFormLayout的addRow()怎么用？
+
+**A**: 自动对齐标签和输入框：
+```cpp
+QFormLayout *form = new QFormLayout();
+form->addRow("用户名:", usernameEdit);
+form->addRow("密码:", passwordEdit);
+// 效果：
+// 用户名: [__________]
+// 密码:   [__________]
+```
+
+---
+
+### Q9: QSlider滑动条怎么用？
+
+**A**: 
+```cpp
+QSlider *slider = new QSlider(Qt::Horizontal);  // 水平方向
+slider->setRange(18, 60);   // 范围18-60
+slider->setValue(25);       // 当前值25
+
+// 获取值
+int value = slider->value();
+
+// 连接信号
+connect(slider, &QSlider::valueChanged, [&](int value) {
+    label->setText(QString::number(value));
+});
+```
+
+---
+
+### Q10: 如何实现一个槽函数连接多个信号？
+
+**A**: 定义Lambda，然后多次connect：
+```cpp
+auto updateProgress = [&]() {
+    int progress = 0;
+    if (!usernameEdit->text().isEmpty()) progress += 20;
+    if (!passwordEdit->text().isEmpty()) progress += 20;
+    // ...
+    progressBar->setValue(progress);
+};
+
+// 多个控件连接同一个槽
+connect(usernameEdit, &QLineEdit::textChanged, updateProgress);
+connect(passwordEdit, &QLineEdit::textChanged, updateProgress);
+connect(swimCheck, &QCheckBox::stateChanged, updateProgress);
+```
+
+---
+
 ## 遇到的问题
--
+- Lambda连接时编译错误，已解决（不能加&符号）
 
 ## 学习心得
+- 掌握了常用控件：QLineEdit、QCheckBox、QRadioButton、QComboBox、QSlider、QProgressBar、QTextEdit
+- 理解了QFormLayout表单布局的便利性
+- 学会了字体设置和进度条更新
+- 深入理解了Lambda表达式作为槽函数的用法
 
 ## 运行截图
 （完成后贴图）

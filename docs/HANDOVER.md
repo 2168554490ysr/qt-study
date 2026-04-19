@@ -474,18 +474,22 @@ git push
 - [x] 完成Day01学习：讲解代码并更新README
 - [x] 完成Day02学习：创建信号与槽项目
 - [x] 解答学习者问题并更新Day02 README的Q&A部分
+- [x] 完成Day03学习：创建常用控件项目，实现用户注册表单
+- [x] 修复Lambda连接编译错误
+- [x] 更新Day03 README的Q&A部分（10个问题）
 
 ### 7.2 学习者状态
 - ✅ Day01已完成：理解QApplication、窗口创建、按钮添加
 - ✅ Day02已完成：理解信号与槽、Lambda表达式、布局管理
-- 学习者主动提问，理解深入
-- 等待开始Day03的学习
+- ✅ Day03已完成：掌握常用控件、QFormLayout、字体设置、进度条更新
+- 学习者主动提问，理解深入，动手实践能力强
+- 等待开始Day04的学习
 
 ### 7.3 下一步任务
-1. 创建Day03项目：常用控件
-2. 实现用户注册表单示例
-3. 讲解QLineEdit、QCheckBox、QRadioButton等控件
-4. 讲解QHBoxLayout水平布局
+1. 创建Day04项目：布局管理深入
+2. 学习QHBoxLayout、QVBoxLayout、QGridLayout
+3. 实现复杂的布局嵌套示例
+4. 学习布局的拉伸因子和约束
 
 ---
 
@@ -495,6 +499,7 @@ git push
 |------|--------|----------|
 | 2026-04-18 | AI Assistant | 初始创建，完成项目架构和Day01准备，初始化Git仓库 |
 | 2026-04-18 | AI Assistant | 完成Day01和Day02学习，更新README的Q&A部分 |
+| 2026-04-18 | AI Assistant | 完成Day03学习，修复编译错误，更新文档 |
 
 ---
 
