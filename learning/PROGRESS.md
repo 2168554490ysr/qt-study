@@ -13,7 +13,7 @@
 | Day 01 | Hello Qt - 第一个Qt程序 | ✅ 已完成 | 2026-04-18 | 理解QApplication、窗口创建、按钮添加 |
 | Day 02 | 信号与槽机制 | ✅ 已完成 | 2026-04-18 | 掌握connect、Lambda表达式、布局管理 |
 | Day 03 | 常用控件(Widgets) | ✅ 已完成 | 2026-04-18 | 掌握QLineEdit、QCheckBox、QSlider等控件，实现用户注册表单 |
-| Day 04 | 布局管理(Layout) | 📝 进行中 | 2026-04-19 | 创建项目，学习QHBoxLayout、QVBoxLayout、QGridLayout、布局嵌套、拉伸因子 |
+| Day 04 | 布局管理(Layout) | ✅ 已完成 | 2026-04-19 | 掌握QHBoxLayout、QVBoxLayout、QGridLayout、布局嵌套、拉伸因子、setRowStretch |
 | Day 05 | 主窗口(MainWindow) | ⬜ 未开始 | - | 菜单栏、工具栏、状态栏 |
 | Day 06 | 自定义控件 | ⬜ 未开始 | - | 创建可复用控件 |
 | Day 07 | QSS样式表 | ⬜ 未开始 | - | 界面美化、主题切换 |
@@ -22,7 +22,7 @@
 | Day 10 | 资源系统 | ⬜ 未开始 | - | 图标、样式打包 |
 | **项目** | **UI组件库** | ⬜ 未开始 | - | 整合所有知识点 |
 
-**阶段进度**: 3/11
+**阶段进度**: 4/11
 
 ---
 
@@ -109,7 +109,7 @@
 ## 总体进度汇总
 
 ```
-第一阶段：UI基础           [███       ] 3/11
+第一阶段：UI基础           [████      ] 4/11
 第二阶段：SSH连接          [          ] 0/8
 第三阶段：系统监控          [          ] 0/8
 第四阶段：文件传输          [          ] 0/6
@@ -143,8 +143,16 @@
   - 实现了进度条动态更新
   - 修复了Lambda连接编译错误（不能加&符号）
   - 更新了README的Q&A部分（10个问题）
-- 准备开始Day04：布局管理深入学习
+- **完成Day04学习**：掌握布局管理
+  - 学习了QHBoxLayout水平布局、QVBoxLayout垂直布局
+  - 掌握了QGridLayout网格布局的使用
+  - 理解了布局嵌套（水平+垂直组合）
+  - 掌握了拉伸因子setColumnStretch和setRowStretch
+  - 理解了addStretch弹性空间的作用
+  - 学会了QGroupBox分组容器
+  - 更新了README的Q&A部分（新增2个问题）
+- 准备开始Day05：主窗口(MainWindow)
 
 ---
 
-**最后更新**: 2026-04-18（Day03完成）
+**最后更新**: 2026-04-19（Day04完成）
