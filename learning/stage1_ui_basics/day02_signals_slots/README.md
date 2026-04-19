@@ -223,6 +223,149 @@ make
 
 ---
 
+## 常见问题解答 (Q&A)
+
+### Q1: `new QVBoxLayout(&window)` 中的 `&window` 是引用传递吗？
+
+**A**: 不是，这是**指针传递**。
+
+```cpp
+QVBoxLayout *layout = new QVBoxLayout(&window);
+```
+
+**解析**：
+- `&window` 取window的地址（指针）
+- `QVBoxLayout`构造函数需要 `QWidget *parent` 参数
+- 传递指针是为了建立**父子对象关系**
+- 当window销毁时，layout会自动销毁（Qt内存管理机制）
+
+**对比**：
+```cpp
+// 引用传递（C++语法）
+void func(QWidget &ref);
+func(window);        // 直接传对象
+
+// 指针传递（Qt常用）
+void func(QWidget *ptr);
+func(&window);       // 传地址（指针）
+```
+
+---
+
+### Q2: `layout->addWidget(label)` 是做什么的？
+
+**A**: 将控件添加到布局中，由布局管理其位置和大小。
+
+```cpp
+label->setAlignment(Qt::AlignCenter);  // 设置文字居中
+layout->addWidget(label);               // 添加到布局
+```
+
+**作用**：
+- `addWidget()` 把label放入layout管理的区域
+- layout会自动决定label的位置和大小
+- 窗口大小改变时，label会自动调整
+
+**注意**：`->` 是因为layout和label都是**指针**。
+
+---
+
+### Q3: `lineEdit->setPlaceholderText()` 有什么用？
+
+**A**: 设置**占位提示文字**。
+
+```cpp
+lineEdit->setPlaceholderText("在此输入文字...");
+```
+
+**效果**：
+- 输入框为空时，显示灰色提示文字
+- 用户开始输入后，提示文字自动消失
+
+**对比**：
+```cpp
+// 占位文字（推荐）- 输入后消失
+lineEdit->setPlaceholderText("提示文字");
+
+// 默认文字 - 用户需要手动删除
+lineEdit->setText("默认内容");
+```
+
+---
+
+### Q4: 信号与槽连接代码详解
+
+**示例1**：按钮点击改变标签
+```cpp
+QObject::connect(btn1, &QPushButton::clicked, [&]() {
+    QString text = lineEdit->text();
+    if (text.isEmpty()) {
+        label->setText("请输入内容！");
+    } else {
+        label->setText("你输入了: " + text);
+    }
+});
+```
+
+**解析**：
+| 部分 | 含义 |
+|------|------|
+| `btn1` | 发送者（按钮） |
+| `&QPushButton::clicked` | 信号（点击事件） |
+| `[&]` | Lambda捕获列表，按引用捕获所有变量 |
+| `()` | 参数列表（clicked无参数） |
+| `{...}` | 槽函数实现代码 |
+
+**执行流程**：
+```
+用户点击btn1 → 发射clicked()信号 → 执行Lambda代码
+```
+
+---
+
+**示例2**：带参数的信号连接
+```cpp
+QObject::connect(lineEdit, &QLineEdit::textChanged, [&](const QString &text) {
+    label->setText("正在输入: " + text);
+});
+```
+
+**解析**：
+- `textChanged(const QString &text)` 是带参数的信号
+- Lambda必须接收相同参数：`[&](const QString &text)`
+- 每输入一个字符就会触发一次
+
+**执行流程**：
+```
+输入"H" → textChanged("H") → 标签显示"正在输入: H"
+输入"e" → textChanged("He") → 标签显示"正在输入: He"
+```
+
+---
+
+### Q5: 为什么用 `[&]` 捕获列表？
+
+**A**: Lambda需要访问外部变量。
+
+```cpp
+[&]  // 按引用捕获所有变量
+```
+
+**原因**：
+- Lambda内部使用了 `lineEdit`、`label` 等外部变量
+- `[&]` 让这些变量在Lambda内部可用
+- 避免拷贝，提高效率
+
+**其他捕获方式**：
+| 写法 | 含义 |
+|------|------|
+| `[]` | 不捕获任何变量 |
+| `[=]` | 按值捕获所有变量 |
+| `[&]` | 按引用捕获所有变量（推荐） |
+| `[this]` | 捕获当前对象指针 |
+
+---
+
 ## 遇到的问题
 -
 
