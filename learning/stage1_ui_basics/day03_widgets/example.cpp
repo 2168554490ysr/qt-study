@@ -102,7 +102,9 @@ int main(int argc, char *argv[])
 
     // ==================== 城市选择 ====================
     QHBoxLayout *cityLayout = new QHBoxLayout();
+
     QLabel *cityLabel = new QLabel("城市:");
+    
     QComboBox *cityCombo = new QComboBox();
     cityCombo->addItem("北京");
     cityCombo->addItem("上海");
@@ -111,8 +113,8 @@ int main(int argc, char *argv[])
     cityCombo->addItem("杭州");
     cityCombo->setCurrentIndex(1);  // 默认选择上海
 
-    cityLayout->addWidget(cityCombo);
     cityLayout->addWidget(cityLabel);
+    cityLayout->addWidget(cityCombo);
     cityLayout->addStretch();
     mainLayout->addLayout(cityLayout);
 
