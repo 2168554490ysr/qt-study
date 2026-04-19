@@ -13,7 +13,7 @@
 | Day 01 | Hello Qt - 第一个Qt程序 | ✅ 已完成 | 2026-04-18 | 理解QApplication、窗口创建、按钮添加 |
 | Day 02 | 信号与槽机制 | ✅ 已完成 | 2026-04-18 | 掌握connect、Lambda表达式、布局管理 |
 | Day 03 | 常用控件(Widgets) | ✅ 已完成 | 2026-04-18 | 掌握QLineEdit、QCheckBox、QSlider等控件，实现用户注册表单 |
-| Day 04 | 布局管理(Layout) | ⬜ 未开始 | - | 水平、垂直、网格布局 |
+| Day 04 | 布局管理(Layout) | 📝 进行中 | 2026-04-19 | 创建项目，学习QHBoxLayout、QVBoxLayout、QGridLayout、布局嵌套、拉伸因子 |
 | Day 05 | 主窗口(MainWindow) | ⬜ 未开始 | - | 菜单栏、工具栏、状态栏 |
 | Day 06 | 自定义控件 | ⬜ 未开始 | - | 创建可复用控件 |
 | Day 07 | QSS样式表 | ⬜ 未开始 | - | 界面美化、主题切换 |
