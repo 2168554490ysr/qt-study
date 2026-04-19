@@ -490,26 +490,36 @@ git push
 - [x] **掌握布局嵌套和拉伸因子setColumnStretch/setRowStretch**
 - [x] **更新Day04 README的Q&A部分（新增Q8、Q9关于行拉伸）**
 - [x] **标记Day04为已完成状态**
+- [x] **创建Day05项目：主窗口(MainWindow)**
+- [x] **创建day05_mainwindow.pro项目文件**
+- [x] **创建main.cpp示例代码（菜单栏、工具栏、状态栏、中心部件）**
+- [x] **创建README.md学习文档（含Q&A）**
+- [x] **验证Day05代码编译通过**
+- [x] **更新PROGRESS.md进度文档（Day05标记为进行中）**
+- [x] **更新HANDOVER.md交接文档"
 
 ### 7.2 学习者状态
 - ✅ Day01已完成：理解QApplication、窗口创建、按钮添加
 - ✅ Day02已完成：理解信号与槽、Lambda表达式、布局管理
 - ✅ Day03已完成：掌握常用控件、QFormLayout、字体设置、进度条更新
 - ✅ Day04已完成：掌握QHBoxLayout、QVBoxLayout、QGridLayout、布局嵌套、拉伸因子
+- 📝 Day05已创建：主窗口项目已创建并验证编译，等待学习
 - Qt5开发环境已安装（版本5.12.8）
 - Git远程仓库已配置并可用
-- 准备开始Day05：主窗口(MainWindow)
 
 ### 7.3 下一步任务
 1. ~~创建Day04项目~~ ✅ 已完成
 2. ~~学习Day04代码~~ ✅ 已完成
 3. ~~理解布局嵌套和拉伸因子~~ ✅ 已完成
 4. ~~更新README Q&A~~ ✅ 已完成
-5. **创建Day05项目：主窗口(MainWindow)**
-   - 学习菜单栏(QMenuBar)
+5. ~~创建Day05项目~~ ✅ 已完成
+6. **学习Day05代码：主窗口(MainWindow)**
+   - 理解QMainWindow结构
+   - 学习菜单栏(QMenuBar)和QAction
    - 学习工具栏(QToolBar)
    - 学习状态栏(QStatusBar)
-   - 学习中心部件(Central Widget)
+   - 理解中心部件(Central Widget)
+   - 掌握动作的快捷键设置和复用
 
 ---
 
@@ -521,6 +531,7 @@ git push
 | 2026-04-18 | AI Assistant | 完成Day01和Day02学习，更新README的Q&A部分 |
 | 2026-04-18 | AI Assistant | 完成Day03学习，修复编译错误，更新文档 |
 | 2026-04-19 | AI Assistant | 安装Qt5开发环境，创建Day04布局管理项目，更新进度文档 |
+| 2026-04-19 | AI Assistant | 完成Day04学习，创建Day05主窗口项目，更新所有进度文档 |
 
 ---
 
