@@ -1,24 +1,24 @@
 # Day 06: 自定义控件 (Custom Widget)
 
 ## 学习目标
-- [ ] 学习继承 QWidget 创建自定义控件
-- [ ] 理解自定义信号的定义和使用
-- [ ] 理解自定义槽的定义和使用
-- [ ] 掌握控件的组合（在一个控件中包含其他控件）
-- [ ] 学习重写 paintEvent 绘制自定义外观
-- [ ] 学习重写鼠标/键盘事件
-- [ ] 理解 Q_OBJECT 宏的作用
+- [x] 学习继承 QWidget 创建自定义控件
+- [x] 理解自定义信号的定义和使用
+- [x] 理解自定义槽的定义和使用
+- [x] 掌握控件的组合（在一个控件中包含其他控件）
+- [x] 学习重写 paintEvent 绘制自定义外观
+- [x] 学习重写鼠标/键盘事件
+- [x] 理解 Q_OBJECT 宏的作用
 
 ---
 
 ## 实践任务
-1. [ ] 创建自定义控件类 CounterWidget
-2. [ ] 定义自定义信号（valueChanged、maximumReached、minimumReached）
-3. [ ] 定义自定义槽（increment、decrement、reset）
-4. [ ] 组合 QLabel、QPushButton、QSlider 创建复合控件
-5. [ ] 重写 paintEvent 绘制背景和进度条
-6. [ ] 重写 mousePressEvent 实现点击增加功能
-7. [ ] 在主程序中使用自定义控件
+1. [x] 创建自定义控件类 CounterWidget
+2. [x] 定义自定义信号（valueChanged、maximumReached、minimumReached）
+3. [x] 定义自定义槽（increment、decrement、reset）
+4. [x] 组合 QLabel、QPushButton、QSlider 创建复合控件
+5. [x] 重写 paintEvent 绘制背景和进度条
+6. [x] 重写 mousePressEvent 实现点击增加功能
+7. [x] 在主程序中使用自定义控件
 
 ---
 
@@ -199,6 +199,76 @@ counter->setStyleSheet("background-color: yellow;");
 // 指定 this 为父控件
 m_valueLabel = new QLabel("0", this);
 ```
+
+### Q11: Makefile 是谁写的？
+**A:** Makefile 不是手写的，而是 **qmake 自动生成的**！
+
+构建流程：
+```
+.pro 项目文件 → qmake → Makefile → make → 可执行文件
+```
+
+你写的：`.pro` 文件（项目配置）  
+qmake 生成：`Makefile`（编译规则）  
+make 使用：`Makefile` 生成可执行文件
+
+### Q12: `emit` 关键字是做什么的？
+**A:** `emit` 是一个**空宏**，只是为了提高代码可读性，明确表示"这里发出信号"。
+
+```cpp
+// 这两行效果完全相同：
+emit valueChanged(5);   // ✅ 推荐，明确表示发信号
+valueChanged(5);        // 效果一样，但不直观
+```
+
+`emit` 的定义： `#define emit` （就是空的！）
+
+### Q13: 如何使用自定义控件？
+**A:** 和 Qt 内置控件用法**完全一样**！
+
+```cpp
+// 创建
+CounterWidget *counter = new CounterWidget();
+
+// 设置属性
+counter->setRange(0, 20);
+counter->setValue(10);
+
+// 连接信号
+connect(counter, &CounterWidget::valueChanged, callback);
+
+// 添加到布局
+layout->addWidget(counter);
+```
+
+### Q14: `new QVBoxLayout(widgetGroup)` 是什么意思？
+**A:** 创建垂直布局并应用到 `widgetGroup` 控件。
+
+等价写法：
+```cpp
+// 写法1（代码中的方式）
+QVBoxLayout *layout = new QVBoxLayout(widgetGroup);
+
+// 写法2（等价的）
+QVBoxLayout *layout = new QVBoxLayout();
+widgetGroup->setLayout(layout);
+```
+
+作用：让 `widgetGroup`（如 QGroupBox）使用这个布局管理内部子控件。
+
+### Q15: 为什么要在控件内部 `connect`？
+**A:** 这是**封装内部逻辑**，让控件自包含。
+
+```cpp
+// CounterWidget.cpp 内部连接
+connect(m_incButton, &QPushButton::clicked, 
+        this, &CounterWidget::increment);
+```
+
+好处：
+- 外部使用者不需要知道内部按钮细节
+- 控件开箱即用，无需额外配置
+- 内部实现可以修改而不影响外部
 
 ---
 

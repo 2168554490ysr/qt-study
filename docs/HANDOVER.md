@@ -515,6 +515,13 @@ git push
 - [x] **创建README.md学习文档**
 - [x] **验证Day06代码编译通过**
 - [x] **更新PROGRESS.md进度文档（Day06标记为进行中）**
+- [x] **完成Day06学习：理解继承QWidget创建自定义控件**
+- [x] **掌握Q_OBJECT宏和自定义信号槽**
+- [x] **掌握emit关键字和qmake构建流程**
+- [x] **学习控件组合和paintEvent自定义绘制**
+- [x] **更新Day06 README的Q&A部分（新增Q11-Q15）**
+- [x] **标记Day06为已完成状态**
+- [x] **更新PROGRESS.md进度文档（Day06标记为已完成）**
 
 ### 7.2 学习者状态
 - ✅ Day01已完成：理解QApplication、窗口创建、按钮添加
@@ -522,9 +529,10 @@ git push
 - ✅ Day03已完成：掌握常用控件、QFormLayout、字体设置、进度条更新
 - ✅ Day04已完成：掌握QHBoxLayout、QVBoxLayout、QGridLayout、布局嵌套、拉伸因子
 - ✅ Day05已完成：掌握QMainWindow、菜单栏、工具栏、状态栏、中心部件
+- ✅ Day06已完成：掌握自定义控件、Q_OBJECT宏、自定义信号槽、paintEvent、qmake构建流程
 - Qt5开发环境已安装（版本5.12.8）
 - Git远程仓库已配置并可用
-- 📝 Day06已创建：自定义控件CounterWidget项目已创建并验证编译，等待学习
+- 准备开始Day07：QSS样式表
 
 ### 7.3 下一步任务
 1. ~~创建Day04项目~~ ✅ 已完成
@@ -533,11 +541,13 @@ git push
 4. ~~更新README Q&A~~ ✅ 已完成
 5. ~~创建Day05项目~~ ✅ 已完成
 6. ~~学习Day05代码~~ ✅ 已完成
-7. **创建Day06项目：自定义控件**
-   - 学习继承QWidget创建自定义控件
-   - 掌握自定义信号和槽
-   - 学习重写paintEvent绘制自定义外观
-   - 理解控件的组合和封装
+7. ~~创建Day06项目~~ ✅ 已完成
+8. ~~学习Day06代码~~ ✅ 已完成
+9. **创建Day07项目：QSS样式表**
+   - 学习QSS基本语法（类似CSS）
+   - 掌握控件样式设置（颜色、字体、边框）
+   - 学习伪状态样式（hover、pressed、disabled）
+   - 实现主题切换功能
 
 ---
 
@@ -552,6 +562,7 @@ git push
 | 2026-04-19 | AI Assistant | 完成Day04学习，创建Day05主窗口项目，更新所有进度文档 |
 | 2026-04-19 | AI Assistant | 完成Day05学习，掌握QMainWindow、菜单栏、工具栏、状态栏，更新README的Q&A部分 |
 | 2026-04-19 | AI Assistant | 创建Day06项目：自定义控件CounterWidget，包含自定义信号槽、paintEvent、控件组合 |
+| 2026-04-19 | AI Assistant | 完成Day06学习，掌握emit关键字、qmake构建流程，更新README的Q&A部分（新增Q11-Q15） |
 
 ---
 

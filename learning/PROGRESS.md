@@ -15,14 +15,14 @@
 | Day 03 | 常用控件(Widgets) | ✅ 已完成 | 2026-04-18 | 掌握QLineEdit、QCheckBox、QSlider等控件，实现用户注册表单 |
 | Day 04 | 布局管理(Layout) | ✅ 已完成 | 2026-04-19 | 掌握QHBoxLayout、QVBoxLayout、QGridLayout、布局嵌套、拉伸因子、setRowStretch |
 | Day 05 | 主窗口(MainWindow) | ✅ 已完成 | 2026-04-19 | 掌握QMainWindow、菜单栏、工具栏、状态栏、中心部件、QAction复用、QString格式化 |
-| Day 06 | 自定义控件 | 📝 进行中 | 2026-04-19 | 创建自定义控件CounterWidget，学习自定义信号槽、paintEvent、控件组合 |
+| Day 06 | 自定义控件 | ✅ 已完成 | 2026-04-19 | 掌握继承QWidget创建自定义控件、自定义信号槽、paintEvent、控件组合、emit关键字、qmake构建流程 |
 | Day 07 | QSS样式表 | ⬜ 未开始 | - | 界面美化、主题切换 |
 | Day 08 | Model/View基础 | ⬜ 未开始 | - | 数据与视图分离 |
 | Day 09 | 国际化(i18n) | ⬜ 未开始 | - | 多语言支持 |
 | Day 10 | 资源系统 | ⬜ 未开始 | - | 图标、样式打包 |
 | **项目** | **UI组件库** | ⬜ 未开始 | - | 整合所有知识点 |
 
-**阶段进度**: 5/11
+**阶段进度**: 6/11
 
 ---
 
@@ -109,14 +109,14 @@
 ## 总体进度汇总
 
 ```
-第一阶段：UI基础           [█████     ] 5/11
+第一阶段：UI基础           [██████    ] 6/11
 第二阶段：SSH连接          [          ] 0/8
 第三阶段：系统监控          [          ] 0/8
 第四阶段：文件传输          [          ] 0/6
 第五阶段：远程终端          [          ] 0/7
 第六阶段：测试平台          [          ] 0/6
 ─────────────────────────────────────────
-总进度                     [██        ] 5/46
+总进度                     [██        ] 6/46
 ```
 
 ---
@@ -163,8 +163,32 @@
   - 学习了QString格式化字符串（arg()方法）
   - 实现了实时字符数统计功能
   - 更新了README的Q&A部分（新增Q8-Q10）
-- 准备开始Day06：自定义控件
+- **完成Day05学习**：掌握主窗口(MainWindow)
+  - 理解了QMainWindow的结构（菜单栏、工具栏、状态栏、中心部件）
+  - 掌握了QMenuBar菜单栏的创建和使用
+  - 学习了QAction动作的创建和复用（同时用于菜单和工具栏）
+  - 掌握了QToolBar工具栏的创建
+  - 掌握了QStatusBar状态栏的使用（临时消息和永久部件）
+  - 理解了中心部件(Central Widget)的概念
+  - 学习了快捷键设置（QKeySequence::New/Open/Save等）
+  - 掌握了QMessageBox::about关于对话框
+  - 学习了QString格式化字符串（arg()方法）
+  - 实现了实时字符数统计功能
+  - 更新了README的Q&A部分（新增Q8-Q10）
+- **完成Day06学习**：掌握自定义控件
+  - 理解了继承QWidget创建自定义控件的方法
+  - 掌握了Q_OBJECT宏的作用（启用信号槽机制）
+  - 学习了自定义信号的定义和使用（valueChanged、maximumReached、minimumReached）
+  - 学习了自定义槽的定义和使用（increment、decrement、reset）
+  - 掌握了emit关键字的作用（空宏，提高可读性）
+  - 学习了控件组合技术（在一个控件中包含QLabel、QPushButton、QSlider）
+  - 掌握了重写paintEvent实现自定义绘制（背景、边框、进度条）
+  - 学习了重写mousePressEvent实现点击交互
+  - 理解了控件内部信号槽连接（封装内部逻辑）
+  - 学习了qmake构建流程（.pro → Makefile → 可执行文件）
+  - 更新了README的Q&A部分（新增Q11-Q15）
+- 准备开始Day07：QSS样式表
 
 ---
 
-**最后更新**: 2026-04-19（Day05完成）
+**最后更新**: 2026-04-19（Day06完成）
