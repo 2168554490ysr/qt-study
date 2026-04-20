@@ -504,6 +504,17 @@ git push
 - [x] **更新Day05 README的Q&A部分（新增Q8-Q10）**
 - [x] **标记Day05为已完成状态**
 - [x] **更新PROGRESS.md进度文档（Day05标记为已完成）**
+- [x] **创建Day06项目：自定义控件**
+- [x] **创建CounterWidget自定义控件类**
+- [x] **创建自定义信号（valueChanged、maximumReached、minimumReached）**
+- [x] **创建自定义槽（increment、decrement、reset）**
+- [x] **重写paintEvent实现自定义绘制**
+- [x] **重写mousePressEvent实现点击交互**
+- [x] **控件组合：QLabel、QPushButton、QSlider**
+- [x] **创建main.cpp展示自定义控件使用**
+- [x] **创建README.md学习文档**
+- [x] **验证Day06代码编译通过**
+- [x] **更新PROGRESS.md进度文档（Day06标记为进行中）**
 
 ### 7.2 学习者状态
 - ✅ Day01已完成：理解QApplication、窗口创建、按钮添加
@@ -513,7 +524,7 @@ git push
 - ✅ Day05已完成：掌握QMainWindow、菜单栏、工具栏、状态栏、中心部件
 - Qt5开发环境已安装（版本5.12.8）
 - Git远程仓库已配置并可用
-- 准备开始Day06：自定义控件
+- 📝 Day06已创建：自定义控件CounterWidget项目已创建并验证编译，等待学习
 
 ### 7.3 下一步任务
 1. ~~创建Day04项目~~ ✅ 已完成
@@ -540,6 +551,7 @@ git push
 | 2026-04-19 | AI Assistant | 安装Qt5开发环境，创建Day04布局管理项目，更新进度文档 |
 | 2026-04-19 | AI Assistant | 完成Day04学习，创建Day05主窗口项目，更新所有进度文档 |
 | 2026-04-19 | AI Assistant | 完成Day05学习，掌握QMainWindow、菜单栏、工具栏、状态栏，更新README的Q&A部分 |
+| 2026-04-19 | AI Assistant | 创建Day06项目：自定义控件CounterWidget，包含自定义信号槽、paintEvent、控件组合 |
 
 ---
 
