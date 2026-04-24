@@ -16,7 +16,7 @@
 | Day 04 | 布局管理(Layout) | ✅ 已完成 | 2026-04-19 | 掌握QHBoxLayout、QVBoxLayout、QGridLayout、布局嵌套、拉伸因子、setRowStretch |
 | Day 05 | 主窗口(MainWindow) | ✅ 已完成 | 2026-04-19 | 掌握QMainWindow、菜单栏、工具栏、状态栏、中心部件、QAction复用、QString格式化 |
 | Day 06 | 自定义控件 | ✅ 已完成 | 2026-04-19 | 掌握继承QWidget创建自定义控件、自定义信号槽、paintEvent、控件组合、emit关键字、qmake构建流程 |
-| Day 07 | QSS样式表 | ⬜ 未开始 | - | 界面美化、主题切换 |
+| Day 07 | QSS样式表 | ✅ 已完成 | 2026-04-24 | 掌握QSS基本语法、控件样式、伪状态、渐变效果、三种主题切换 |
 | Day 08 | Model/View基础 | ⬜ 未开始 | - | 数据与视图分离 |
 | Day 09 | 国际化(i18n) | ⬜ 未开始 | - | 多语言支持 |
 | Day 10 | 资源系统 | ⬜ 未开始 | - | 图标、样式打包 |
@@ -187,8 +187,18 @@
   - 理解了控件内部信号槽连接（封装内部逻辑）
   - 学习了qmake构建流程（.pro → Makefile → 可执行文件）
   - 更新了README的Q&A部分（新增Q11-Q15）
-- 准备开始Day07：QSS样式表
+- **完成Day07学习**：掌握QSS样式表
+  - 理解了QSS基本语法（类似CSS的选择器、属性、值）
+  - 掌握了控件样式设置（颜色、字体、边框、圆角、尺寸）
+  - 学习了伪状态样式（:hover、:pressed、:disabled、:focus）
+  - 掌握了子控件选择器（::drop-down、::handle、::chunk等）
+  - 学习了渐变效果（qlineargradient、qradialgradient）
+  - 实现了三种主题切换功能（浅色、深色、蓝色）
+  - 理解了ID选择器的使用（setObjectName + #id）
+  - 掌握了在代码中应用QSS的方法（qApp->setStyleSheet）
+  - 更新了README的Q&A部分（10个问题）
+- 准备开始Day08：Model/View基础
 
 ---
 
-**最后更新**: 2026-04-19（Day06完成）
+**最后更新**: 2026-04-24（Day07完成）
