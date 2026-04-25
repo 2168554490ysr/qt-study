@@ -17,12 +17,12 @@
 | Day 05 | 主窗口(MainWindow) | ✅ 已完成 | 2026-04-19 | 掌握QMainWindow、菜单栏、工具栏、状态栏、中心部件、QAction复用、QString格式化 |
 | Day 06 | 自定义控件 | ✅ 已完成 | 2026-04-19 | 掌握继承QWidget创建自定义控件、自定义信号槽、paintEvent、控件组合、emit关键字、qmake构建流程 |
 | Day 07 | QSS样式表 | ✅ 已完成 | 2026-04-24 | 掌握QSS基本语法、控件样式、伪状态、渐变效果、三种主题切换 |
-| Day 08 | Model/View基础 | ⬜ 未开始 | - | 数据与视图分离 |
+| Day 08 | Model/View基础 | 🔄 进行中 | 2026-04-24 | 掌握Model/View架构、QStringListModel、QStandardItemModel、自定义QAbstractTableModel |
 | Day 09 | 国际化(i18n) | ⬜ 未开始 | - | 多语言支持 |
 | Day 10 | 资源系统 | ⬜ 未开始 | - | 图标、样式打包 |
 | **项目** | **UI组件库** | ⬜ 未开始 | - | 整合所有知识点 |
 
-**阶段进度**: 6/11
+**阶段进度**: 7/11
 
 ---
 
@@ -197,8 +197,19 @@
   - 理解了ID选择器的使用（setObjectName + #id）
   - 掌握了在代码中应用QSS的方法（qApp->setStyleSheet）
   - 更新了README的Q&A部分（10个问题）
-- 准备开始Day08：Model/View基础
+- **创建Day08项目**：Model/View基础
+  - 理解了Model/View架构概念（数据与视图分离）
+  - 掌握了QStringListModel和QListView的使用
+  - 掌握了QStandardItemModel和QTreeView的使用
+  - 学习了自定义模型DeviceTableModel继承QAbstractTableModel
+  - 掌握了QTableView的使用和配置
+  - 理解了Model的角色系统（DisplayRole、BackgroundRole等）
+  - 学习了beginInsertRows/endInsertRows等数据变更通知机制
+  - 实现了数据的增删改查功能
+  - 理解了QModelIndex的作用和使用
+  - 更新了README的Q&A部分（10个问题）
+- 准备学习Day08代码
 
 ---
 
-**最后更新**: 2026-04-24（Day07完成）
+**最后更新**: 2026-04-24（Day08项目创建完成）
