@@ -1,0 +1,57 @@
+/* 蓝色主题样式表 */
+QMainWindow {
+    background-color: #e3f2fd;
+}
+
+QPushButton {
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #E64A19;
+}
+
+QPushButton:pressed {
+    background-color: #BF360C;
+}
+
+QGroupBox {
+    border: 2px solid #2196F3;
+    border-radius: 8px;
+    margin-top: 12px;
+    padding-top: 10px;
+    font-weight: bold;
+    color: #1565C0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 5px;
+}
+
+QLabel {
+    color: #1565C0;
+    font-size: 14px;
+}
+
+QComboBox {
+    padding: 5px;
+    border: 2px solid #2196F3;
+    border-radius: 4px;
+    background-color: white;
+    color: #1565C0;
+}
+
+QTextEdit {
+    border: 2px solid #2196F3;
+    border-radius: 4px;
+    background-color: white;
+    color: #1565C0;
+    padding: 8px;
+}

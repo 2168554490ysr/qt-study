@@ -1,0 +1,25 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/icons">
+        <file>resources/icons/app_icon.png</file>
+        <file>resources/icons/new_file.png</file>
+        <file>resources/icons/open_file.png</file>
+        <file>resources/icons/save_file.png</file>
+        <file>resources/icons/exit.png</file>
+        <file>resources/icons/settings.png</file>
+        <file>resources/icons/help.png</file>
+    </qresource>
+    <qresource prefix="/styles">
+        <file>resources/styles/light.qss</file>
+        <file>resources/styles/dark.qss</file>
+        <file>resources/styles/blue.qss</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>resources/images/logo.png</file>
+        <file>resources/images/banner.jpg</file>
+    </qresource>
+    <qresource prefix="/translations">
+        <file>resources/translations/day10_zh_CN.qm</file>
+        <file>resources/translations/day10_en.qm</file>
+    </qresource>
+</RCC>
