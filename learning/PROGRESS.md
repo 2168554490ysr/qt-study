@@ -18,11 +18,11 @@
 | Day 06 | 自定义控件 | ✅ 已完成 | 2026-04-19 | 掌握继承QWidget创建自定义控件、自定义信号槽、paintEvent、控件组合、emit关键字、qmake构建流程 |
 | Day 07 | QSS样式表 | ✅ 已完成 | 2026-04-24 | 掌握QSS基本语法、控件样式、伪状态、渐变效果、三种主题切换 |
 | Day 08 | Model/View基础 | ✅ 已完成 | 2026-04-24 | 掌握Model/View架构、QStringListModel、QStandardItemModel、自定义QAbstractTableModel、Role系统、数据变更通知 |
-| Day 09 | 国际化(i18n) | 🔄 进行中 | 2026-04-24 | 掌握tr()函数、lupdate/lrelease工具、QTranslator、动态语言切换 |
+| Day 09 | 国际化(i18n) | ✅ 已完成 | 2026-04-25 | 掌握tr()函数、lupdate/lrelease工具、QTranslator、动态语言切换 |
 | Day 10 | 资源系统 | ⬜ 未开始 | - | 图标、样式打包 |
 | **项目** | **UI组件库** | ⬜ 未开始 | - | 整合所有知识点 |
 
-**阶段进度**: 7/11
+**阶段进度**: 9/11
 
 ---
 
@@ -217,8 +217,15 @@
   - 实现了运行时动态语言切换功能
   - 理解了.ts(XML)和.qm(二进制)文件的区别
   - 更新了README的Q&A部分（10个问题）
-- 准备学习Day09代码
+- **完成Day09学习**：国际化(i18n)
+  - 理解了tr()函数的工作原理和参数替换
+  - 掌握了QTranslator的动态加载和切换
+  - 学习了updateTexts()刷新界面文字的技巧
+  - 理解了QLocale获取系统语言的方法
+  - 掌握了.qm文件加载路径的处理
+  - 理解了removeTranslator/installTranslator的时机
+- 准备开始Day10：资源系统
 
 ---
 
-**最后更新**: 2026-04-24（Day09项目创建完成）
+**最后更新**: 2026-04-25（Day09学习完成）
